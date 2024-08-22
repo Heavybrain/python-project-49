@@ -35,6 +35,6 @@ def game():
             return
         elif random_number % 2 != 0 and user_input == "yes":
             print("'yes' is wrong answer;(. Correct answer was 'no'")
-            print(f"Let's try again,{name}!")
+            print(f"Let's try again, {name}!")
             return
     print(f'Congratulations,{name}!')
