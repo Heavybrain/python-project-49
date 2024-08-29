@@ -20,10 +20,10 @@ print('Answer "yes" if the number is even, otherwise answer "no"')
 def game():
     counter = 0
     while counter < 3:
-        random_number = random.randint(1,100)
+        random_number = random.randint(1, 100)
         print(f"Question: {random_number}")
         user_input = input("Your answer: ").lower()
-        if  random_number % 2 == 0 and user_input =='yes':
+        if random_number % 2 == 0 and user_input == 'yes':
             counter += 1
             print('Correct!')
         elif random_number % 2 != 0 and user_input == 'no':
