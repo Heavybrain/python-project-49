@@ -19,28 +19,32 @@ name = welcome_user()
 print('What number is missing in the progression?')
 
 
+def create_progression():
+    start_num = random.randint(1, 100)
+    step = random.randint(1, 100)
+    miss_num = random.randint(0, 9)
+
+    progression = []
+    for i in range(10):
+        progression.append(start_num + i * step)
+
+    correct_answer = progression[miss_num]
+    progression[miss_num] = ..
+
+    return progression, correct_answer
+
 def prog_game():
     counter = 0
     while counter < 3:
-        num1 = random.randint(1,100)
-        num2 = random.randint(1,100)
-        miss_num = random.randint(0,9)
-        progression = []
-        prog_number = 0
-        while prog_number < 10:
-            progression.append(num1+num2)
-            prog_number += 1
-        return
-        progression[miss_num] == '..'
+        progression, correct_answer = create_progression()
         print(f"Question: {progression}")
         user_input = input("Your answer: ")
-        if int(user_input) == int(progression[miss_num]):
+        if int(user_input) == correct_answer:
             counter += 1
             print('Correct!')
         else:
-            print(f"{user_input} is wrong answer;(. Correct answer was {progression[miss_num]}")
+            print(f"{user_input} is wrong answer;(. Correct answer was {correct_answer}")
             print(f"Let's try again, {name}!")
-            return
     print(f'Congratulations, {name}!')
 
         
