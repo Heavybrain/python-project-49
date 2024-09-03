@@ -29,7 +29,7 @@ def create_progression():
         progression.append(start_num + i * step)
 
     correct_answer = progression[miss_num]
-    progression[miss_num] = ..
+    progression[miss_num] = '..'
 
     return progression, correct_answer
 
@@ -37,7 +37,10 @@ def prog_game():
     counter = 0
     while counter < 3:
         progression, correct_answer = create_progression()
-        print(f"Question: {progression}")
+        progression_str = ''
+        for item in progression:
+            progression_str += str(item) + ' '
+        print(f"Question: {progression_str}")
         user_input = input("Your answer: ")
         if int(user_input) == correct_answer:
             counter += 1
@@ -45,6 +48,7 @@ def prog_game():
         else:
             print(f"{user_input} is wrong answer;(. Correct answer was {correct_answer}")
             print(f"Let's try again, {name}!")
+            return
     print(f'Congratulations, {name}!')
 
         
