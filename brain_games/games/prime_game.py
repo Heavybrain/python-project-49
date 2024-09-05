@@ -23,18 +23,23 @@ def game_prime():
         random_number = random.randint(1, 100)
         print(f"Question: {random_number}")
         user_input = input("Your answer: ").lower()
-        if random_number % list_numbers == 0 and user_input == 'no':
+        is_divisible = False
+        for num in list_numbers:
+            if random_number % num == 0:
+                is_divisible = True
+                break
+        if is_divisible and user_input == 'no':
             counter += 1
             print('Correct!')
-        elif random_number % list_numbers != 0 and user_input == 'yes':
+        elif not is_divisible and user_input == 'yes':
             counter += 1
             print('Correct!')
-        elif random_number % list_numbers == 0 and user_input == "yes":
+        elif is_divisible and user_input == "yes":
             print("'yes' is wrong answer;(. Correct answer was 'no'")
-            print(f"Let's try again,{name}!")
+            print(f"Let's try again, {name}!")
             return
-        elif random_number % list_numbers != 0 and user_input == "no":
+        elif not is_divisible and user_input == "no":
             print("'no' is wrong answer;(. Correct answer was 'yes'")
             print(f"Let's try again, {name}!")
             return
-    print(f'Congratulations,{name}!')
+    print(f'Congratulations, {name}!')
