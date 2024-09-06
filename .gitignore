@@ -8,3 +8,5 @@ dist/
 .coverage
 coverage.xml
 .pytest_cache
+.pyproject.toml.swo
+.pyproject.toml.swp
