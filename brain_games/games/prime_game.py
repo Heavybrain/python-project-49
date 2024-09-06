@@ -14,7 +14,7 @@ sys.path.append('/home/heavybrain/projects/python-project-49/brain_games')
 from ..cli import welcome_user
 
 name = welcome_user()
-print('Answer "yes" if the number is prime, otherwise answer "no".')
+print('Answer "yes" if given number is prime, otherwise answer "no".')
 
 def game_prime():
     counter = 0
