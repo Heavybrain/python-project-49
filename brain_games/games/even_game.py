@@ -31,7 +31,7 @@ def game():
             print('Correct!')
         elif random_number % 2 == 0 and user_input == "no":
             print("'no' is wrong answer;(. Correct answer was 'yes'")
-            print(f"Let's try again,{name}!")
+            print(f"Let's try again, {name}!")
             return
         elif random_number % 2 != 0 and user_input == "yes":
             print("'yes' is wrong answer;(. Correct answer was 'no'")
