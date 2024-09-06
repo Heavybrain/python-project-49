@@ -8,8 +8,10 @@ packages = [
     { include  = "brain_games" },
 ]
 license = "MIT"
-classifiers = ["Topic :: Software Development :: Build Tools"
-"Topic :: Software Development :: Libraries :: Python Modules"
+classifiers = [
+"Topic :: Software Development :: Build Tools",
+"Topic :: Software Development :: Libraries :: Python Modules",
+"Programming Language :: Python"
 ]
 repository = "https://github.com/Heavybrain/python-project-49"
 
