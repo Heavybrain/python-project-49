@@ -1,3 +1,8 @@
+import random
+import sys
+from ..cli import welcome_user
+sys.path.append('/home/heavybrain/projects/python-project-49/brain_games')
+
 # Игра: "проверка на четность"
 #  1. Вывод случайного целого числа на экран
 #  2. Пользователь отвечает yes/no
@@ -6,12 +11,8 @@
 #  5. Игра до 3 правильных ответов подряд
 #  6. Вывод поздравления
 
-#!/usr/bin/env python3
+# !/usr/bin/env python3
 
-import random
-import sys
-sys.path.append('/home/heavybrain/projects/python-project-49/brain_games')
-from ..cli import welcome_user
 
 name = welcome_user()
 print('Answer "yes" if the number is even, otherwise answer "no".')

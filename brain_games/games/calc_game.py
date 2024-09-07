@@ -1,7 +1,7 @@
 import random
 import sys
-sys.path.append('/home/heavybrain/projects/python-project-49/brain_games')
 from ..cli import welcome_user
+sys.path.append('/home/heavybrain/projects/python-project-49/brain_games')
 
 # Игра: "калькулятор"
 # 1. Вывод случайного математического выражения на экран
@@ -11,7 +11,7 @@ from ..cli import welcome_user
 # 5. Игра до 3 правильных ответов подряд
 # 6. Вывод поздравления
 
-#!/usr/bin/env python3
+# !/usr/bin/env python3
 
 
 name = welcome_user()
