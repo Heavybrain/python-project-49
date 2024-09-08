@@ -20,13 +20,20 @@ print('Answer "yes" if given number is prime. Otherwise answer "no".')
 
 def game_prime():
     counter = 0
-    list_numbers = [3, 4, 5, 6, 7, 8, 9]
+    list_numbers = [2, 3, 4, 5, 6, 7, 8, 9]
+    prime_l = [2, 3, 5, 7]
+    not_prime_l = [1, 4, 6, 8]
     while counter < 3:
-        random_number = random.randint(1, 100)
-        print(f"Question: {random_number}")
+        rand = random.randint(1, 100)
+        print(f"Question: {rand}")
         us_in = input("Your answer: ").lower()
-        is_div = any(random_number % num == 0 for num in list_numbers)
-        if (is_div and us_in == 'no') or (not is_div and us_in == 'yes'):
+        is_div = any(rand % num == 0 for num in list_numbers)
+        a = any(prime_l)
+        b = any(not_prime_l)
+        if (rand == b and us_in == 'no') or (rand == a and us_in == 'yes'):
+            counter += 1
+            print('Correct!')
+        elif (is_div and us_in == 'no') or (not is_div and us_in == 'yes'):
             counter += 1
             print('Correct!')
         else:
