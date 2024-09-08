@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
-import sys
 from brain_games.games.prime_game import game_prime
-
 
 
 def main():
