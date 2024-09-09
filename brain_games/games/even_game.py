@@ -18,24 +18,30 @@ name = welcome_user()
 print('Answer "yes" if the number is even, otherwise answer "no".')
 
 
+def is_answer_correct(rand, us_in):
+    if rand % 2 == 0 and us_in == 'yes':
+        return 'Correct!'
+    elif rand % 2 != 0 and us_in == 'no':
+        return 'Correct!'
+    elif rand % 2 == 0 and us_in == 'no':
+        return f"'{us_in}' is wrong answer;(. Correct answer was 'yes"
+    else:
+        return f"'{us_in}' is wrong answer;(. Correct answer was 'no'"
+    
+
+
 def game():
     counter = 0
     while counter < 3:
-        random_number = random.randint(1, 100)
-        print(f"Question: {random_number}")
-        user_input = input("Your answer: ").lower()
-        if random_number % 2 == 0 and user_input == 'yes':
+        rand = random.randint(1, 100)
+        print(f"Question: {rand}")
+        us_in = input("Your answer: ").lower()
+        result = is_answer_correct(rand, us_in)
+        if result == 'Correct!':
             counter += 1
-            print('Correct!')
-        elif random_number % 2 != 0 and user_input == 'no':
-            counter += 1
-            print('Correct!')
-        elif random_number % 2 == 0 and user_input == "no":
-            print("'no' is wrong answer;(. Correct answer was 'yes'")
-            print(f"Let's try again, {name}!")
-            return
-        elif random_number % 2 != 0 and user_input == "yes":
-            print("'yes' is wrong answer;(. Correct answer was 'no'")
+            print(result)
+        else:
+            print(result)
             print(f"Let's try again, {name}!")
             return
     print(f'Congratulations, {name}!')

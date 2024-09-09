@@ -18,27 +18,36 @@ name = welcome_user()
 print('Answer "yes" if given number is prime. Otherwise answer "no".')
 
 
+def is_p(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+
+def get_correct_answer(rand, us_in):
+    if is_p(rand) and us_in == 'yes' or not is_p(rand) and us_in == 'no':
+        return 'Correct!'
+    elif is_p(rand) and us_in == 'no':
+        return f"'{us_in}' is wrong answer;(. Correct answer was 'yes'"
+    else:
+        return f"'{us_in}' is wrong answer;(. Correct answer was 'no'"
+
+
 def game_prime():
     counter = 0
-    list_numbers = [2, 3, 4, 5, 6, 7, 8, 9]
-    prime_l = [2, 3, 5, 7]
-    not_prime_l = [1, 4, 6, 8]
     while counter < 3:
         rand = random.randint(1, 100)
         print(f"Question: {rand}")
         us_in = input("Your answer: ").lower()
-        is_div = any(rand % num == 0 for num in list_numbers)
-        a = any(prime_l)
-        b = any(not_prime_l)
-        if (rand == b and us_in == 'no') or (rand == a and us_in == 'yes'):
+        result = get_correct_answer(rand, us_in)
+        if result == 'Correct!':
             counter += 1
-            print('Correct!')
-        elif (is_div and us_in == 'no') or (not is_div and us_in == 'yes'):
-            counter += 1
-            print('Correct!')
+            print(result)
         else:
-            c_ans = 'no' if is_div else 'yes'
-            print(f"'{us_in}' is wrong answer;(. Correct answer was '{c_ans}'")
+            print(result)
             print(f"Let's try again, {name}!")
             return
     print(f'Congratulations, {name}!')
