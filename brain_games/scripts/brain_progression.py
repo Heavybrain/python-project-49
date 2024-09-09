@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-from brain_games.games.progression_game import prog_game
+from brain_games.games.logic import play_game
+from brain_games.games.progression_game.py import get_question_and_answer
+from brain_games.games.progression_game.py import QUESTION
 
 
 def main():
-    prog_game()
+    play_game(QUESTION, get_question_and_answer)
 
 
 if __name__ == '__main__':
