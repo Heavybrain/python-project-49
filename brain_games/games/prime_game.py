@@ -1,6 +1,7 @@
-import random
 import sys
+import random
 from ..cli import welcome_user
+from .logic import play_game
 sys.path.append('/home/heavybrain/projects/python-project-49/brain_games')
 
 # Игра: "Простое ли число?"
@@ -37,7 +38,11 @@ def get_correct_answer(rand, us_in):
 
 
 def game_prime():
-    counter = 0
+    play_game(get_correct_answer)
+
+
+
+"""     counter = 0
     while counter < 3:
         rand = random.randint(1, 100)
         print(f"Question: {rand}")
@@ -50,4 +55,4 @@ def game_prime():
             print(result)
             print(f"Let's try again, {name}!")
             return
-    print(f'Congratulations, {name}!')
+    print(f'Congratulations, {name}!') """
