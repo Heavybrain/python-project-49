@@ -1,4 +1,4 @@
-from brain_games.games.logic import play_game
+from brain_games.logic import play_game
 from brain_games.games.calc_game import get_question_and_answer
 from brain_games.games.calc_game import QUESTION
 

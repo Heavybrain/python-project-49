@@ -1,9 +1,12 @@
+import prompt
+
+
 ROUNDS_AMOUNT = 3
 
 
 def play_game(question, get_question_and_answer):
     print('Welcome to the Brain Games!')
-    name = input('May I have your name? ')
+    name = prompt.string('May I have your name? ')
     print('Hello, ' + name + '!')
     print(question)
     count = 0

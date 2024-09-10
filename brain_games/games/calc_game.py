@@ -8,13 +8,15 @@ from operator import sub
 QUESTION = 'What is the result of the expression?'
 
 
-def find_operation(oper):
+def get_operation(oper):
     if oper == '+':
         return add
     elif oper == '*':
         return mul
     elif oper == '-':
         return sub
+    else:
+        return 'Incorrect operation'
 
 
 def get_question_and_answer():
@@ -22,5 +24,5 @@ def get_question_and_answer():
     b = randint(1, 100)
     oper = choice('+-*')
     new_task = f'{a} {oper} {b}'
-    correct_answer = str(find_operation(oper)(a, b))
+    correct_answer = str(get_operation(oper)(a, b))
     return new_task, correct_answer
