@@ -5,7 +5,7 @@ from operator import mul
 from operator import sub
 
 
-QUESTION = 'What is the result of the expression?'
+question = 'What is the result of the expression?'
 
 
 def get_operation(oper):
