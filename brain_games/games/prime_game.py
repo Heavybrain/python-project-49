@@ -1,7 +1,7 @@
 from random import randint
 
 
-question = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def is_prime(a):

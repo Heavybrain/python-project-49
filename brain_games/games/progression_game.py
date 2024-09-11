@@ -1,7 +1,7 @@
 import random
 
 
-question = 'What number is missing in the progression?'
+rules = 'What number is missing in the progression?'
 
 
 def get_question_and_answer():

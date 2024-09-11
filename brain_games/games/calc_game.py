@@ -5,7 +5,7 @@ from operator import mul
 from operator import sub
 
 
-question = 'What is the result of the expression?'
+rules = 'What is the result of the expression?'
 
 
 def get_operation(oper):
@@ -16,7 +16,7 @@ def get_operation(oper):
     elif oper == '-':
         return sub
     else:
-        return 'Incorrect operation'
+        raise ValueError("Unexpected operator")
 
 
 def get_question_and_answer():
