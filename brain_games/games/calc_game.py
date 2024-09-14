@@ -5,7 +5,7 @@ from operator import mul
 from operator import sub
 
 
-rules = 'What is the result of the expression?'
+RULES = 'What is the result of the expression?'
 
 
 def get_operation(oper):

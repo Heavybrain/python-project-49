@@ -1,7 +1,7 @@
 from random import randint
 
 
-rules = 'Answer "yes" if the number is even, otherwise answer "no".'
+RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def is_even(a):
